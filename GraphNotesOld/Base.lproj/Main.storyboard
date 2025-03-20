@@ -87,6 +87,21 @@
             </objects>
             <point key="canvasLocation" x="1798" y="694"/>
         </scene>
+        <!--Knowledge View Controller-->
+        <scene sceneID="DHj-87-j3A">
+            <objects>
+                <viewController storyboardIdentifier="KnowledgeViewController" id="RGA-xb-NCH" customClass="KnowledgeViewController" customModule="GraphNotesOld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MFs-4w-d0L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pO0-cU-Mwl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQf-DD-wOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584" y="694"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

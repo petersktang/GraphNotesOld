@@ -92,6 +92,9 @@ extension TableViewController {
         case 1: vc = main.instantiateViewController(identifier: DrawingViewController.uniqueIdentifier, creator: { coder in
             return DrawingViewController(coder: coder)
         })
+        case 2: vc = main.instantiateViewController(identifier: KnowledgeViewController.uniqueIdentifier, creator: { coder in
+            return KnowledgeViewController(coder: coder)
+        })
         default:
             fatalError("\(#function) unexpected child view controller to push")
         }
