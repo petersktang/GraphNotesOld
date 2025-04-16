@@ -7,13 +7,15 @@
 import UIKit
 
 internal class ScrollableStackCell: UITableViewCell {
+    private static let childs: Int = 4
     private lazy var childViews: [UILabel] = {
-        return (0 ... 2).map { _ in UILabel() }
+        (0 ... Self.childs-1).map { _ in UILabel() }
     }()
     private var action: ((Int) -> (Void))?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         configureSubviews()
     }
     @MainActor required init?(coder: NSCoder) {

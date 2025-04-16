@@ -92,11 +92,22 @@ extension TableViewController {
         case 1: vc = main.instantiateViewController(identifier: DrawingViewController.uniqueIdentifier, creator: { coder in
             return DrawingViewController(coder: coder)
         })
-        case 2: vc = main.instantiateViewController(identifier: KnowledgeViewController.uniqueIdentifier, creator: { coder in
-            return KnowledgeViewController(coder: coder)
+        case 2: vc = main.instantiateViewController(identifier: MetaDataViewController.uniqueIdentifier, creator: { coder in
+            return MetaDataViewController(coder: coder)
         })
+        case 3: vc = main.instantiateViewController(identifier: ASHCollectionViewController.uniqueIdentifier, creator: { coder in
+            return ASHCollectionViewController(coder: coder)
+        })
+        // case 2: vc = main.instantiateViewController(identifier: PenTestViewController.uniqueIdentifier, creator: { coder in
+        //     return PenTestViewController(coder: coder)
+        // })
+        // case 3: vc = main.instantiateViewController(identifier: MetaDataViewController.uniqueIdentifier, creator: { coder in
+        //     return MetaDataViewController(coder: coder)
+        // })
         default:
-            fatalError("\(#function) unexpected child view controller to push")
+            vc = main.instantiateViewController(identifier: MetaDataViewController.uniqueIdentifier, creator: { coder in
+                return MetaDataViewController(coder: coder)
+            })
         }
         navigationController?.pushViewController(vc, animated: false)
     }
