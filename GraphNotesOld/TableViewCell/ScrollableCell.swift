@@ -7,12 +7,9 @@
 import UIKit
 
 internal class ScrollableCell: UITableViewCell {
+    private static let childs: Int = 4
     private lazy var childViews: [UILabel] = {
-        return (0 ... 2).map { item in
-            let v = UILabel()
-            v.tag = item
-            return v
-        }
+        (0 ... Self.childs-1).map { _ in UILabel() }
     }()
     private var action: ((Int) -> (Void))?
     
